@@ -1,0 +1,6 @@
+Day	Sign ups
+Wed	7
+Thurs	5
+Sun	4
+Mon	2
+Tues	1

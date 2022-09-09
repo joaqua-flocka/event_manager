@@ -94,13 +94,14 @@ end
 reg_hours = sort_reg_time_by_hour(reg_times)
 reg_days = sort_reg_time_by_weekday(reg_times)
 
+Dir.mkdir('registration_data')
 puts "Saving peak registration times..."
-File.open('registration_hour_data.txt','w') do |file|
+File.open('registration_data/registration_hour_data.txt','w') do |file|
   file.puts "Time\tSign ups"
   reg_hours.each {|key, val| file.puts "#{key}:00\t#{val}"}
 end
 puts "Saving peak registration days..."
-File.open('registration_weekday_data.txt','w') do |file|
+File.open('registration_data/registration_weekday_data.txt','w') do |file|
   file.puts "Day\tSign ups"
   reg_days.each {|key, val| file.puts "#{key}\t#{val}"}
 end
